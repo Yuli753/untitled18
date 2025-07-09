@@ -27,17 +27,17 @@ jobs:
       - name: setup gradlew
         run: chmod +x gradlew
 
-      - name: Run tests with Gradle
-        run: ./gradlew clean test
+      - name: Run Cucumber Tests
+        run: ./gradlew test
 
       - name: Upload HTML Report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: cucumber-html-report
-          path: target/cucumber-reports.html
+          path: build/reports/tests/test/index.html
 
       - name: Upload JSON Report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
-          name: cucumbe-json-report
-          path: target/cucumber-reports.json
+          name: cucumber-json-report
+          path: target/report.json

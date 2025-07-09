@@ -1,0 +1,36 @@
+[
+  {
+    "uri": "login.feature",
+    "feature": {
+      "name": "Login to SauceDemo"
+    },
+    "elements": [
+      {
+        "name": "Successful login with valid credentials",
+        "type": "scenario",
+        "steps": [
+          {
+            "name": "Given I am on the SauceDemo login page",
+            "result": { "status": "passed" }
+          },
+          {
+            "name": "When I enter username \"standard_user\"",
+            "result": { "status": "passed" }
+          },
+          {
+            "name": "And I enter password \"secret_sauce\"",
+            "result": { "status": "passed" }
+          },
+          {
+            "name": "And I click the login button",
+            "result": { "status": "passed" }
+          },
+          {
+            "name": "Then I should be redirected to the inventory page",
+            "result": { "status": "passed" }
+          }
+        ]
+      }
+    ]
+  }
+]
